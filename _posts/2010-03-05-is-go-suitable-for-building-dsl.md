@@ -16,6 +16,7 @@ building DSL.
 # Rake, a popular Ruby DSL
 
 Rake, like make or ant, is a DSL for defining tasks.
+
 {% highlight ruby %}
 task :hello do  
   print "Hello "
@@ -188,14 +189,15 @@ Task("TaskA", ...).DependsOn("TaskB", "TaskC", "TaskD")
 
 Let's try summarize in a table what we discussed until this point.
 
-DSL-related features	Go	Ruby
-Method chaining	Yes	Yes
-Optional delimiters in maps	No	Yes
-Optional delimiters in lists	No but you can use varargs	Yes
-Metaprogramming	Limited	Yes
-Dynamic reception	No	Yes
-Short signature for blocks	No	Yes
-
+<table class="fancy-table">
+<tr><th>DSL-related features</th><th>Go</th><th>Ruby</th></tr>
+<tr><td>Method chaining</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Optional delimiters in maps</td><td>No</td><td>Yes</td></tr>
+<tr><td>Optional delimiters in lists</td><td>No but you can use varargs</td><td>Yes</td></tr>
+<tr><td>Metaprogramming</td><td>Limited</td><td>Yes</td></tr>
+<tr><td>Dynamic reception</td><td>No</td><td>Yes</td></tr>
+<tr><td>Short signature for blocks</td><td>No</td><td>Yes</td></tr>
+</table>
 
 # The answer
 
