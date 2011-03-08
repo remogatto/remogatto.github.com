@@ -43,12 +43,17 @@ a {
     color: #00a;
 }
 
+a {
+    color: blue;
+    text-decoration: none;
+}
+
 a:hover {
-    color: black;
+    text-decoration: underline;
 }
 
 a:visited {
-    color: #a0a;
+    color: blue;
 }
 
 table {

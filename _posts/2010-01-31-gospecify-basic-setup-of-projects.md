@@ -4,10 +4,12 @@ title: "Gospecify: Basic setup of the project's structure"
 ---
 # Gospecify: Basic setup of the project's structure
 
-During the last two days I played a bit with GoSpecify by Samuel
-Tesla, a BDD framework for the Go Language. I'm coming from 4 years of
-intense Ruby development and, you know, I could not live without a
-good BDD framework. After watching Samuel Google TechTalk I decided to
+During the last two days I played a bit with
+[GoSpecify](http://github.com/stesla/gospecify) by Samuel Tesla, a BDD
+framework for the Go Language. I'm coming from 4 years of intense Ruby
+development and, you know, I could not live without a good BDD
+framework. After watching Samuel [Google
+TechTalk](http://www.youtube.com/watch?v=4RSJg_1TdpA) I decided to
 explore BDD under Go. The first problem I faced and solved was with
 basic files and folders setup. In this post I'll describe how I
 managed the issue using project structure and makefiles taken from
@@ -19,8 +21,9 @@ First of all, let's create the project folder
 mkdir fib
 </pre>
 
-Yeah, you guessed right, we'll deal with yet another Fibonacci
-sequence implementation ;)
+Yeah, you guessed right, we'll deal with yet another [Fibonacci
+sequence](http://en.wikipedia.org/wiki/Fibonacci_number)
+implementation ;)
 
 Now, move in fib folder and create a basic project structure
 
@@ -187,4 +190,5 @@ Passing: 1  Failing: 0  Pending: 0  Errors: 0
 they all pass.
 
 Well, that's all for now! You can browse the source files used in this
-post on github.
+post on
+[github](http://github.com/remogatto/learning-go/tree/master/gospecify-setup/).

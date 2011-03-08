@@ -23,7 +23,8 @@ install the toolchain to building the language:
 sudo apt-get install bison gcc libc6-dev ed gawk make
 </pre>
 
-And, if you decide to clone the mercurial repository, you need mercurial of course!
+And, if you decide to clone the mercurial repository, you need
+mercurial of course!
 
 <pre class="terminal">
 sudo apt-get install mercurial

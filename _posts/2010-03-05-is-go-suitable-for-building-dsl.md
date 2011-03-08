@@ -7,11 +7,12 @@ title: Is Go suitable for building DSL?
 Computer problems can be approached easier once they are expressed in
 an effective way. There are modern and general-purpose languages like
 Ruby and Python that are suitable for building a sort of internal
-language that is specific for the problem domain: a Domain Specific
-Language (DSL). A DSL tries to describe the problem with
-expressivity. But of course, the mean of expressivity is relative to
-the problem domain. In this blog post I'll explore Go's capability in
-building DSL.
+language that is specific for the problem domain: a [Domain Specific
+Language
+(DSL)](http://en.wikipedia.org/wiki/Domain_Specific_Language). A DSL
+tries to describe the problem with expressivity. But of course, the
+mean of expressivity is relative to the problem domain. In this blog
+post I'll explore Go's capability in building DSL.
 
 # Rake, a popular Ruby DSL
 
@@ -41,7 +42,7 @@ particular,
 * the do ... end part is a ruby block
 
 Since rake DSL uses valid ruby code to express itself we name it an
-internal DSL.
+[internal DSL](http://martinfowler.com/dslwip/InternalOverview.html).
 
 # Makengo: an internal DSL in Go
 
@@ -55,7 +56,7 @@ Belonging from years of experience with dynamic languages such as ruby
 and enjoying its capability to build DSL, I was curious to see how
 much the compiled and strongly typed nature of Go can be bended in
 this sense. So, I started writing a small experimental project named
-makengo.
+[makengo](http://github.com/remogatto/makengo/).
 
 Using makengo DSL, the previous tasks definitions become:
 
@@ -121,7 +122,8 @@ type declaration.
 In Go, types can receive methods. In Makengo, this fact is exploited
 to express dependencies among tasks. Actually, the Task function
 returns a task object and task object can receive the DependsOn method
-allowing for method chaining:
+allowing for [method
+chaining](http://martinfowler.com/dslwip/MethodChaining.html):
 
 
 {% highlight ruby %}
@@ -132,9 +134,11 @@ Task("world", ...).DependsOn("hello")
 
 Go lacks of a ruby-like method_missing method. In ruby, when an
 unknown method is sent to an object the object responds executing
-method_missing. This language feature is known as Dynamic
-Reception. Dynamic Reception, combined with the metaprogramming magic
-of ruby, allows for very readable DSL (taken from Machinist):
+method_missing. This language feature is known as [Dynamic
+Reception](http://martinfowler.com/dslwip/DynamicReception.html). Dynamic
+Reception, combined with the metaprogramming magic of ruby, allows for
+very readable DSL (taken from
+[Machinist](http://github.com/notahat/machinist)):
 
 {% highlight ruby %}
 User.blueprint do
@@ -215,7 +219,8 @@ Another road to explore is the implementation of a light VM in Go
 exploiting some of its advantages against C: built-in concurrency and
 GC. On top of this VM could live a set of dynamic languages more
 suited to implement external DSLs. It seems that Eleanor McHugh is on
-the right track with her GoLightly VM.
+the right track with her
+[GoLightly](http://github.com/feyeleanor/GoLightly) VM.
 
 Go DSL capability need more investigation, of course. But a fact is
 clear to me: I should not think at Go as a Panacea trying to force its
