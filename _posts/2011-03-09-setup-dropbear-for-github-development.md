@@ -2,7 +2,8 @@
 layout: post
 title: "Setup Dropbear for GitHub development on Angstrom"
 ---
-# Preamble
+# {{ page.title }}
+<p class="meta">9 March 2011</p>
 
 This is just a note to myself rather then a comprehensive blog
 post. However, I thought it could be helpful for someone else, so here
